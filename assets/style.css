@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+/* ── Reset & base ── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body, [data-testid="stAppViewContainer"],
+[data-testid="stApp"] {
+  background-color: #0d0f14 !important;
+  color: #e2e4ea !important;
+  font-family: 'DM Sans', sans-serif !important;
+}
+
+/* ── Hide Streamlit chrome ── */
+#MainMenu, footer, header,
+[data-testid="stToolbar"],
+[data-testid="stDecoration"],
+[data-testid="stStatusWidget"] { display: none !important; }
+
+/* ── Sidebar ── */
+[data-testid="stSidebar"] {
+  background-color: #13151c !important;
+  border-right: 1px solid #1f2330 !important;
+}
+[data-testid="stSidebar"] > div:first-child {
+  padding: 2rem 1.25rem !important;
+}
+
+/* Sidebar nav links */
+[data-testid="stSidebarNav"] a {
+  border-radius: 8px !important;
+  padding: 0.5rem 0.75rem !important;
+  font-size: 0.875rem !important;
+  color: #8b90a0 !important;
+  font-weight: 400 !important;
+  transition: all 0.15s !important;
+}
+[data-testid="stSidebarNav"] a:hover {
+  background: #1f2330 !important;
+  color: #e2e4ea !important;
+}
+[data-testid="stSidebarNav"] a[aria-current="page"] {
+  background: #1e2d4a !important;
+  color: #4d9fff !important;
+  font-weight: 500 !important;
+}
+
+/* Sidebar label */
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] .stMarkdown p {
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #4a4f63 !important;
+}
+
+/* Sidebar multiselect */
+[data-testid="stMultiSelect"] > div > div {
+  background: #1a1d27 !important;
+  border: 1px solid #1f2330 !important;
+  border-radius: 8px !important;
+  color: #e2e4ea !important;
+}
+[data-testid="stMultiSelect"] span[data-baseweb="tag"] {
+  background: #1e2d4a !important;
+  border-radius: 6px !important;
+  color: #4d9fff !important;
+  font-size: 0.75rem !important;
+}
+
+/* ── Main content area ── */
+[data-testid="stMainBlockContainer"] {
+  padding: 2.5rem 2.5rem 2rem !important;
+  max-width: 1400px !important;
+}
+
+/* ── Page title ── */
+h1 {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 1.75rem !important;
+  font-weight: 600 !important;
+  color: #f0f2f8 !important;
+  letter-spacing: -0.02em !important;
+  margin-bottom: 0.25rem !important;
+}
+
+/* ── Metric cards ── */
+[data-testid="stMetric"] {
+  background: #13151c !important;
+  border: 1px solid #1f2330 !important;
+  border-radius: 12px !important;
+  padding: 1.25rem 1.5rem !important;
+  transition: border-color 0.2s !important;
+}
+[data-testid="stMetric"]:hover {
+  border-color: #2a3050 !important;
+}
+[data-testid="stMetricLabel"] {
+  font-size: 0.7rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  color: #4a4f63 !important;
+}
+[data-testid="stMetricValue"] {
+  font-family: 'DM Mono', monospace !important;
+  font-size: 1.6rem !important;
+  font-weight: 500 !important;
+  color: #f0f2f8 !important;
+  letter-spacing: -0.02em !important;
+}
+[data-testid="stMetricDelta"] {
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+}
+
+/* ── Divider ── */
+hr {
+  border-color: #1f2330 !important;
+  margin: 1.5rem 0 !important;
+}
+
+/* ── Plotly chart container ── */
+[data-testid="stPlotlyChart"] {
+  background: #13151c !important;
+  border: 1px solid #1f2330 !important;
+  border-radius: 12px !important;
+  padding: 1rem !important;
+  transition: border-color 0.2s !important;
+}
+[data-testid="stPlotlyChart"]:hover {
+  border-color: #2a3050 !important;
+}
+
+/* ── Dataframe ── */
+[data-testid="stDataFrame"] {
+  border: 1px solid #1f2330 !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+[data-testid="stDataFrame"] table {
+  font-family: 'DM Mono', monospace !important;
+  font-size: 0.8rem !important;
+}
+
+/* ── Expander ── */
+[data-testid="stExpander"] {
+  background: #13151c !important;
+  border: 1px solid #1f2330 !important;
+  border-radius: 12px !important;
+}
+[data-testid="stExpander"] summary {
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.04em !important;
+  color: #8b90a0 !important;
+}
+
+/* ── Columns gap ── */
+[data-testid="stHorizontalBlock"] {
+  gap: 1rem !important;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0d0f14; }
+::-webkit-scrollbar-thumb { background: #1f2330; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #2a3050; }
